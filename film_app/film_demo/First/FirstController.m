@@ -164,7 +164,6 @@
         // 拍照
         imageP.sourceType=UIImagePickerControllerSourceTypeCamera;
     }
-
     
     // 允许编辑
     imageP.allowsEditing=YES;
