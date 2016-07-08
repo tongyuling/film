@@ -37,7 +37,6 @@
 		288717931B1800560022DA2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288717921B1800560022DA2B /* UIKit.framework */; };
 		288717951B18005B0022DA2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288717941B18005B0022DA2B /* Foundation.framework */; };
 		288717971B1800630022DA2B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288717961B1800630022DA2B /* CoreGraphics.framework */; };
-		2887179B1B18090A0022DA2B /* FirstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2887179A1B18090A0022DA2B /* FirstController.m */; };
 		288717A21B1810810022DA2B /* AdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 288717A11B1810810022DA2B /* AdView.m */; };
 		288717C61B1810E80022DA2B /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 288717A61B1810E80022DA2B /* MKAnnotationView+WebCache.m */; };
 		288717C71B1810E80022DA2B /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 288717A81B1810E80022DA2B /* NSData+ImageContentType.m */; };
@@ -134,6 +133,7 @@
 		28F0ABE01BCFA07100D80EFB /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F0ABDF1BCFA07100D80EFB /* icon_57.png */; };
 		28F0ABE21BCFA08800D80EFB /* icon_29.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F0ABE11BCFA08800D80EFB /* icon_29.png */; };
 		28F0ABE41BCFA10A00D80EFB /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F0ABE31BCFA10A00D80EFB /* icon.png */; };
+		BA2E5B2E1D2F4C950004BF31 /* FirstController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2E5B2D1D2F4C950004BF31 /* FirstController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,8 +197,6 @@
 		288717921B1800560022DA2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288717941B18005B0022DA2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		288717961B1800630022DA2B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		288717991B18090A0022DA2B /* FirstController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstController.h; path = ../FirstController.h; sourceTree = "<group>"; };
-		2887179A1B18090A0022DA2B /* FirstController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstController.m; path = ../FirstController.m; sourceTree = "<group>"; };
 		2887179D1B1809640022DA2B /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		288717A01B1810810022DA2B /* AdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdView.h; sourceTree = "<group>"; };
 		288717A11B1810810022DA2B /* AdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdView.m; sourceTree = "<group>"; };
@@ -362,6 +360,8 @@
 		28F0ABDF1BCFA07100D80EFB /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57.png; sourceTree = "<group>"; };
 		28F0ABE11BCFA08800D80EFB /* icon_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_29.png; sourceTree = "<group>"; };
 		28F0ABE31BCFA10A00D80EFB /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		BA2E5B2C1D2F4C950004BF31 /* FirstController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstController.h; sourceTree = "<group>"; };
+		BA2E5B2D1D2F4C950004BF31 /* FirstController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -517,8 +517,8 @@
 		2887179E1B1810350022DA2B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				288717991B18090A0022DA2B /* FirstController.h */,
-				2887179A1B18090A0022DA2B /* FirstController.m */,
+				BA2E5B2C1D2F4C950004BF31 /* FirstController.h */,
+				BA2E5B2D1D2F4C950004BF31 /* FirstController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1134,7 +1134,6 @@
 				28D98E1D1BCB928300F596DB /* MMProgressHUDOverlayView.m in Sources */,
 				28D98E3E1BCB942A00F596DB /* RegistView.m in Sources */,
 				28D98E1F1BCB928300F596DB /* MMProgressHUDWindow.m in Sources */,
-				2887179B1B18090A0022DA2B /* FirstController.m in Sources */,
 				288717D21B1810E80022DA2B /* UIImage+WebP.m in Sources */,
 				288717D41B1810E80022DA2B /* UIImageView+WebCache.m in Sources */,
 				288717CB1B1810E80022DA2B /* SDWebImageDownloader.m in Sources */,
@@ -1147,6 +1146,7 @@
 				28D98E201BCB928300F596DB /* MMRadialProgressView.m in Sources */,
 				28D98E311BCB937700F596DB /* NSString+ble.m in Sources */,
 				288717D51B1810E80022DA2B /* UIView+WebCacheOperation.m in Sources */,
+				BA2E5B2E1D2F4C950004BF31 /* FirstController.m in Sources */,
 				288717CF1B1810E80022DA2B /* UIButton+WebCache.m in Sources */,
 				28D98DF81BCB91A500F596DB /* AFHTTPSessionManager.m in Sources */,
 				288717C61B1810E80022DA2B /* MKAnnotationView+WebCache.m in Sources */,
