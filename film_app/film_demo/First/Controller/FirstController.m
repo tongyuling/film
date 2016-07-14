@@ -14,8 +14,10 @@
 #import "ThirdController.h"
 #import "User.h"
 #import "UserTool.h"
+#import "LyCleanCaches.h"
+#import "LySandBoxPath.h"
 
-@interface FirstController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface FirstController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIAlertViewDelegate>
 {
     UIImageView * _imageView;
     AdView * adView;
@@ -188,6 +190,15 @@
 
 -(void)btn4
 {
+//    NSString * cachePath = [LySandBoxPath getCachesDirectory];
+//    double number = [LyCleanCaches sizeWithFilePath:cachePath];
+//    NSString * m = [NSString stringWithFormat:@"%.2f",number];
+//    NSString * message = [NSString stringWithFormat:@"%@M",m];
+//    
+//    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:message delegate:self cancelButtonTitle:@"清除" otherButtonTitles:nil, nil];
+//    [alert show];
+    
+    
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"确定要退出吗" preferredStyle:UIAlertControllerStyleAlert];
     
     [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -201,7 +212,15 @@
     }]];
     [self presentViewController:alert animated:YES completion:^{
     }];
+    
 }
+
+//清除
+//- (void)alertViewCancel:(UIAlertView *)alertView
+//{
+//    //清缓存
+//    [LyCleanCaches clearCachesFromDirectoryPath:[LySandBoxPath getCachesDirectory]];
+//}
 
 
 #pragma mark UIImagePickerController代理方法

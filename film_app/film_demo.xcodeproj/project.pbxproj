@@ -133,6 +133,8 @@
 		28F0ABE01BCFA07100D80EFB /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F0ABDF1BCFA07100D80EFB /* icon_57.png */; };
 		28F0ABE21BCFA08800D80EFB /* icon_29.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F0ABE11BCFA08800D80EFB /* icon_29.png */; };
 		28F0ABE41BCFA10A00D80EFB /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F0ABE31BCFA10A00D80EFB /* icon.png */; };
+		BA2A861D1D35DBC100E1D6D5 /* LySandBoxPath.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2A861A1D35DBC100E1D6D5 /* LySandBoxPath.m */; };
+		BA2A861E1D35DBC100E1D6D5 /* LyCleanCaches.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2A861C1D35DBC100E1D6D5 /* LyCleanCaches.m */; };
 		BA2E5B2E1D2F4C950004BF31 /* FirstController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2E5B2D1D2F4C950004BF31 /* FirstController.m */; };
 /* End PBXBuildFile section */
 
@@ -360,6 +362,10 @@
 		28F0ABDF1BCFA07100D80EFB /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57.png; sourceTree = "<group>"; };
 		28F0ABE11BCFA08800D80EFB /* icon_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_29.png; sourceTree = "<group>"; };
 		28F0ABE31BCFA10A00D80EFB /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		BA2A86191D35DBC100E1D6D5 /* LySandBoxPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LySandBoxPath.h; sourceTree = "<group>"; };
+		BA2A861A1D35DBC100E1D6D5 /* LySandBoxPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LySandBoxPath.m; sourceTree = "<group>"; };
+		BA2A861B1D35DBC100E1D6D5 /* LyCleanCaches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyCleanCaches.h; sourceTree = "<group>"; };
+		BA2A861C1D35DBC100E1D6D5 /* LyCleanCaches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyCleanCaches.m; sourceTree = "<group>"; };
 		BA2E5B2C1D2F4C950004BF31 /* FirstController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstController.h; sourceTree = "<group>"; };
 		BA2E5B2D1D2F4C950004BF31 /* FirstController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -418,6 +424,7 @@
 		2887176A1B1800220022DA2B /* film_demo */ = {
 			isa = PBXGroup;
 			children = (
+				BA2A86181D35DBA400E1D6D5 /* 清除缓存 */,
 				28D98E351BCB93E500F596DB /* Regist */,
 				28D98DD71BCB90AE00F596DB /* GuideController */,
 				28D98DC61BCB8FAD00F596DB /* Login */,
@@ -945,6 +952,17 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		BA2A86181D35DBA400E1D6D5 /* 清除缓存 */ = {
+			isa = PBXGroup;
+			children = (
+				BA2A86191D35DBC100E1D6D5 /* LySandBoxPath.h */,
+				BA2A861A1D35DBC100E1D6D5 /* LySandBoxPath.m */,
+				BA2A861B1D35DBC100E1D6D5 /* LyCleanCaches.h */,
+				BA2A861C1D35DBC100E1D6D5 /* LyCleanCaches.m */,
+			);
+			path = "清除缓存";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1126,6 +1144,7 @@
 				288717D01B1810E80022DA2B /* UIImage+GIF.m in Sources */,
 				288717CE1B1810E80022DA2B /* SDWebImagePrefetcher.m in Sources */,
 				28D98E011BCB926E00F596DB /* LoginController.m in Sources */,
+				BA2A861D1D35DBC100E1D6D5 /* LySandBoxPath.m in Sources */,
 				28D98E341BCB939100F596DB /* LoginTool.m in Sources */,
 				28D98DF61BCB91A500F596DB /* AFHTTPRequestOperation.m in Sources */,
 				2887176E1B1800220022DA2B /* main.m in Sources */,
@@ -1157,6 +1176,7 @@
 				288717C71B1810E80022DA2B /* NSData+ImageContentType.m in Sources */,
 				288717A21B1810810022DA2B /* AdView.m in Sources */,
 				28D98E1C1BCB928300F596DB /* MMProgressHUD.m in Sources */,
+				BA2A861E1D35DBC100E1D6D5 /* LyCleanCaches.m in Sources */,
 				28D98E181BCB928300F596DB /* MMHud.m in Sources */,
 				28D98E211BCB928300F596DB /* MMVectorImage.m in Sources */,
 				288717CD1B1810E80022DA2B /* SDWebImageManager.m in Sources */,
