@@ -253,7 +253,9 @@
     CGImageRef imageMasked = CGBitmapContextCreateImage(context);
     CGContextRelease(context);
     CGColorSpaceRelease(colorSpace);
-    return [UIImage imageWithCGImage:imageMasked];
+    UIImage * image = [UIImage imageWithCGImage:imageMasked];
+    CGImageRelease(imageMasked);
+    return image;
 }
 
 #pragma mark 返回按钮方法

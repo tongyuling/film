@@ -144,6 +144,15 @@
     [btn4.layer setBorderColor:colorref4];//边框颜色
     [btn4 addTarget:self action:@selector(btn4) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn4];
+    
+    CGColorRelease(colorref1);
+    CGColorSpaceRelease(colorSpace1);
+    CGColorRelease(colorref2);
+    CGColorSpaceRelease(colorSpace2);
+    CGColorRelease(colorref3);
+    CGColorSpaceRelease(colorSpace3);
+    CGColorRelease(colorref4);
+    CGColorSpaceRelease(colorSpace4);
 }
 
 
