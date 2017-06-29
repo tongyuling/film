@@ -138,7 +138,7 @@
     }];
 }
 
-
+#pragma mark 图片+文字
 - (UIImage *)imageAddText:(UIImage *)img text:(NSString *)logoText
 {
     NSString* mark = logoText;
