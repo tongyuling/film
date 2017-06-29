@@ -89,7 +89,6 @@
 #pragma mark 保存方法
 -(void)baoCunBtn
 {
-    
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"确定要保存到相册吗" preferredStyle:UIAlertControllerStyleAlert];
     
     [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -124,10 +123,12 @@
         
         // 保存图片到相册
         
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+        //
+        UIImage * img = [self imageAddText:self.imageView.image text:self.caption.text];
         
+        UIImageWriteToSavedPhotosAlbum(img, nil, nil, nil);
         
-        
+        [self.navigationController popViewControllerAnimated:YES];
         
     }]];
     [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
@@ -137,6 +138,24 @@
     }];
 }
 
+
+- (UIImage *)imageAddText:(UIImage *)img text:(NSString *)logoText
+{
+    NSString* mark = logoText;
+    int w = img.size.width;
+    int h = img.size.height;
+    UIGraphicsBeginImageContext(img.size);
+    [img drawInRect:CGRectMake(0, 0, w, h)];
+    NSDictionary *attr = @{NSFontAttributeName: [UIFont systemFontOfSize:50], NSForegroundColorAttributeName : [UIColor whiteColor]  };
+    //位置显示
+    [mark drawInRect:self.frame1 withAttributes:attr];
+    
+    UIImage *aimg = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return aimg;
+    
+}
 
 /************************/
 #pragma mark 手势方法
@@ -168,7 +187,7 @@
     
     self.frame1=CGRectMake(self.caption.frame.origin.x, self.caption.frame.origin.y, self.caption.frame.size.width, self.caption.frame.size.height);
     
-    //NSLog(@"frame1==%@",NSStringFromCGRect(self.frame1));
+    NSLog(@"frame1==%@",NSStringFromCGRect(self.frame1));
 }
 /************************/
 
@@ -199,7 +218,6 @@
         self.caption.backgroundColor = [UIColor clearColor];
         
         self.text = textView.text;
-        NSLog(@"self.text==%@",self.text);
         
         return NO;
     }
@@ -212,50 +230,6 @@
 {
     self.caption.backgroundColor=KColorFromRGB(0x808069);
     return self.caption;
-}
-
-
-
-//图片加文字方法
-- (UIImage *)watermarkImage:(NSString *)text
-{
-    //1.获取上下文
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    //2.绘制图片
-    [self.imageView.image drawInRect:CGRectMake(0, 0, KviewWidth, KviewHeight)];
-    //将文字绘制上去
-    [self.text drawInRect:self.frame1 withAttributes:nil];
-    
-    //4.获取绘制到得图片
-    UIImage *watermarkImage = UIGraphicsGetImageFromCurrentImageContext();
-    //5.结束图片的绘制
-    UIGraphicsEndImageContext();
-    return watermarkImage;
-    
-}
-
--(UIImage *)addText:(UIImage *)img text:(NSString *)text1
-{
-    //get image width and height
-    int w = img.size.width;
-    int h = img.size.height;
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    //create a graphic context with CGBitmapContextCreate
-    CGContextRef context = CGBitmapContextCreate(NULL, w, h, 8, 4 * w, colorSpace, kCGImageAlphaPremultipliedFirst);
-    CGContextDrawImage(context, CGRectMake(0, 0, w, h), img.CGImage);
-    CGContextSetRGBFillColor(context, 0.0, 1.0, 1.0, 1);
-    char* text = (char *)[text1 cStringUsingEncoding:NSASCIIStringEncoding];
-    CGContextSelectFont(context, "Georgia", 30, kCGEncodingMacRoman);
-    CGContextSetTextDrawingMode(context, kCGTextFill);
-    CGContextSetRGBFillColor(context, 255, 0, 0, 1);
-    CGContextShowTextAtPoint(context, self.caption.frame.origin.x, self.caption.frame.origin.y, text, strlen(text));
-    //Create image ref from the context
-    CGImageRef imageMasked = CGBitmapContextCreateImage(context);
-    CGContextRelease(context);
-    CGColorSpaceRelease(colorSpace);
-    UIImage * image = [UIImage imageWithCGImage:imageMasked];
-    CGImageRelease(imageMasked);
-    return image;
 }
 
 #pragma mark 返回按钮方法
